@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # hello_world.py
 # First Python program for GitHub 🚀
 
@@ -8,6 +8,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-=======
 
->>>>>>> ad0bd4b8370137e73f62f638773dda7b9cb1c1b9
+
+
