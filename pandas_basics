@@ -1,0 +1,56 @@
+# pandas_basics.py
+# Introduction to pandas for data handling & analysis
+
+import pandas as pd
+
+# 1. Creating Series
+print("=== Pandas Series ===")
+numbers = [10, 20, 30, 40]
+series = pd.Series(numbers, name="Numbers")
+print(series)
+
+# 2. Creating DataFrame
+print("\n=== Pandas DataFrame ===")
+data = {
+    "Name": ["Alice", "Bob", "Charlie", "David"],
+    "Age": [24, 27, 22, 32],
+    "City": ["Pune", "Mumbai", "Delhi", "Bangalore"]
+}
+df = pd.DataFrame(data)
+print(df)
+
+# 3. Basic Operations
+print("\n=== DataFrame Info ===")
+print(df.info())
+
+print("\n=== First 2 Rows ===")
+print(df.head(2))
+
+print("\n=== Statistics ===")
+print(df.describe())
+
+# 4. Selecting Columns & Rows
+print("\n=== Selecting Column 'Name' ===")
+print(df["Name"])
+
+print("\n=== Selecting Rows with loc & iloc ===")
+print(df.loc[0])   # by label
+print(df.iloc[1])  # by index
+
+# 5. Filtering Data
+print("\n=== Filtering Age > 25 ===")
+print(df[df["Age"] > 25])
+
+# 6. Adding New Column
+print("\n=== Adding Salary Column ===")
+df["Salary"] = [50000, 60000, 45000, 70000]
+print(df)
+
+# 7. GroupBy & Aggregation
+print("\n=== Group By City ===")
+print(df.groupby("City")["Salary"].mean())
+
+# 8. Exporting Data
+print("\n=== Exporting DataFrame to CSV (pandas_output.csv) ===")
+df.to_csv("pandas_output.csv", index=False)
+print("Data exported successfully!")
