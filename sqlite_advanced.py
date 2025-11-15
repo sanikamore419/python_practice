@@ -1,4 +1,5 @@
-
+# sqlite_advanced.py
+# Advanced SQL Operations using SQLite
 
 import sqlite3
 
