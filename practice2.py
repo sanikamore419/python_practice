@@ -1,4 +1,4 @@
-# Day 9 Python Practice - All in One
+# Python Practice - All in One
 
 # 1. Find factorial using recursion
 def factorial(n):
