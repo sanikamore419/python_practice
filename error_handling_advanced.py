@@ -57,3 +57,27 @@ def divide_numbers(a, b):
         return f"Result: {result}"
     finally:
         print("Operation complete (finally block executed).")
+
+
+# --------------------------------
+# Testing the functions
+# --------------------------------
+if __name__ == "__main__":
+
+    # Test divide_numbers()
+    print(divide_numbers(10, 2))
+    print(divide_numbers(10, 0))
+    print(divide_numbers("10", 2))
+
+    # Test custom exception
+    try:
+        print(validate_age(-5))
+    except InvalidAgeError as e:
+        print("Caught custom exception:", e)
+
+    try:
+        print(validate_age(150))
+    except InvalidAgeError as e:
+        print("Caught custom exception:", e)
+
+    print(validate_age(25))
