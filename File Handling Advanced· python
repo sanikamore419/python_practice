@@ -1,0 +1,40 @@
+"""
+# ---------------------------
+
+
+def write_csv(filename, data):
+"""Write a list of dictionaries to a CSV file."""
+with open(filename, 'w', newline='') as f:
+writer = csv.DictWriter(f, fieldnames=data[0].keys())
+writer.writeheader()
+writer.writerows(data)
+
+
+
+
+def read_csv(filename):
+"""Read and return CSV data as a list of dictionaries."""
+with open(filename, 'r') as f:
+reader = csv.DictReader(f)
+return list(reader)
+
+
+
+
+# ---------------------------
+# 2. Reading and Writing JSON
+# ---------------------------
+
+
+def write_json(filename, data):
+"""Write Python objects to a JSON file."""
+with open(filename, 'w') as f:
+json.dump(data, f, indent=4)
+
+
+
+
+def read_json(filename):
+"""Read JSON file and return Python object."""
+with open(filename, 'r') as f:
+return json.load(f)
