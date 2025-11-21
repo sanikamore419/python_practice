@@ -1,15 +1,3 @@
-"""
-File: list_comprehensions_generators.py
-Description:
-    This file covers:
-    - List Comprehensions
-    - Set Comprehensions
-    - Dictionary Comprehensions
-    - Nested Comprehensions
-    - Generator Expressions
-    - Generator Functions (yield)
-    - Difference between List vs Generator (Memory)
-"""
 
 # -----------------------------------------------
 # 1. LIST COMPREHENSIONS
