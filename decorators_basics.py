@@ -1,16 +1,3 @@
-"""
-decorators_basics.py
---------------------
-Author: [Your Name]
-Date: Today
-
-Purpose:
-    Introduce Python decorators, including:
-    - Simple function decorators
-    - Decorators with arguments
-    - Preserving metadata with functools.wraps
-    - Multiple decorators on one function
-"""
 
 from functools import wraps
 import time
@@ -49,3 +36,43 @@ def timer(func):
 def slow_function():
     time.sleep(1)
     return "Finished slow task!"
+
+# ---------------------------
+# 3. Decorator With Arguments
+# ---------------------------
+def repeat(times):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for i in range(times):
+                print(f"Iteration {i+1}/{times}")
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@repeat(3)
+def greet(name):
+    print(f"Hello, {name}!")
+
+# ---------------------------
+# 4. Multiple Decorators Example
+# ---------------------------
+@timer
+@my_decorator
+def combined():
+    print("Running combined decorators example...")
+
+# ---------------------------
+# Run Tests
+# ---------------------------
+if __name__ == "__main__":
+    say_hello()
+    print()
+
+    print(slow_function())
+    print()
+
+    greet("Alice")
+    print()
+
+    combined()
