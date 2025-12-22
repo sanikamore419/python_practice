@@ -73,3 +73,60 @@ if number % 2 == 0:
     print("Even number")
 else:
     print("Odd number")
+
+
+# --------------------------------------------------
+# 7. Positive, Negative or Zero
+# --------------------------------------------------
+
+num = -5
+
+if num > 0:
+    print("Positive number")
+elif num < 0:
+    print("Negative number")
+else:
+    print("Zero")
+
+# --------------------------------------------------
+# 8. Real-life example: ATM withdrawal
+# --------------------------------------------------
+
+balance = 5000
+withdraw_amount = 3000
+
+if withdraw_amount <= balance:
+    balance -= withdraw_amount
+    print("Withdrawal successful")
+    print("Remaining balance:", balance)
+else:
+    print("Insufficient balance")
+
+# --------------------------------------------------
+# 9. Ternary if (short-hand if else)
+# --------------------------------------------------
+
+a = 10
+b = 20
+
+max_value = a if a > b else b
+print("Maximum value is:", max_value)
+
+# --------------------------------------------------
+# 10. Multiple conditions with user role
+# --------------------------------------------------
+
+role = "student"
+
+if role == "admin":
+    print("Full access granted")
+elif role == "teacher":
+    print("Limited access granted")
+elif role == "student":
+    print("View-only access")
+else:
+    print("No access")
+
+# --------------------------------------------------
+# End of control_flow_if_else.py
+# --------------------------------------------------
